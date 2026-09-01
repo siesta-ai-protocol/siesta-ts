@@ -1,0 +1,45 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-carbon-date",
+  "version": "1.0.0",
+  "description": "Date manipulation via date-fns",
+  "adapter": {
+    "class": "DateFnsAdapter"
+  },
+  "factories": {
+    "now": {
+      "returns": "DateTime",
+      "params": { "type": "object", "properties": {}, "required": [] }
+    },
+    "parse": {
+      "returns": "DateTime",
+      "params": {
+        "type": "object",
+        "properties": { "input": { "type": "string" } },
+        "required": ["input"]
+      }
+    }
+  },
+  "types": {
+    "DateTime": {
+      "methods": {
+        "addWeeks": {
+          "returns": "DateTime",
+          "params": {
+            "type": "object",
+            "properties": { "weeks": { "type": "integer" } },
+            "required": ["weeks"]
+          }
+        },
+        "format": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": { "pattern": { "type": "string" } },
+            "required": ["pattern"]
+          }
+        }
+      }
+    }
+  }
+}

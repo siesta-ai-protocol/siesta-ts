@@ -1,0 +1,20 @@
+{
+  "name": "@siesta/carbon-date",
+  "version": "1.0.0",
+  "description": "Siesta adapter for date-fns",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

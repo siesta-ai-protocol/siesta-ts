@@ -1,0 +1,16 @@
+{
+  "name": "siesta-ts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript implementation of the Siesta protocol",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @siesta/runtime && npm run build -w @siesta/carbon-date",
+    "test": "npm run test -w @siesta/runtime && npm run test -w @siesta/carbon-date",
+    "discover": "node packages/runtime/dist/cli.js discover",
+    "validate": "node packages/runtime/dist/cli.js validate"
+  },
+  "license": "MIT"
+}
