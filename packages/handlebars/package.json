@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/handlebars",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for handlebars",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "handlebars": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

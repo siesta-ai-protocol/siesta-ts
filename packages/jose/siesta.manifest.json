@@ -1,0 +1,62 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-jose",
+  "version": "0.1.0",
+  "description": "JWT / JWS / JWE",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "JoseAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Crypto",
+      "description": "Create a Crypto via jose",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Crypto": {
+      "methods": {
+        "encode": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "payload"
+            ]
+          }
+        },
+        "decode": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "token"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

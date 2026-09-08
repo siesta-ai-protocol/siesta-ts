@@ -1,0 +1,70 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-cheerio",
+  "version": "0.1.0",
+  "description": "Server-side jQuery-like DOM",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "CheerioAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "load": {
+      "returns": "Document",
+      "description": "Create a Document via cheerio",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Document": {
+      "methods": {
+        "query": {
+          "returns": "Document",
+          "params": {
+            "type": "object",
+            "properties": {
+              "selector": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "selector"
+            ]
+          }
+        },
+        "text": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "html": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

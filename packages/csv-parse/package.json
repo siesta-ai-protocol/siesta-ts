@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/csv-parse",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for csv-parse",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "csv-parse": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

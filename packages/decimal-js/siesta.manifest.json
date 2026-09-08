@@ -1,0 +1,73 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-decimal-js",
+  "version": "0.1.0",
+  "description": "Arbitrary-precision decimals",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "DecimalJsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Money",
+      "description": "Create a Money via decimal.js",
+      "params": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Money": {
+      "methods": {
+        "add": {
+          "returns": "Money",
+          "params": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "amount"
+            ]
+          }
+        },
+        "format": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "getAmount": {
+          "returns": "number",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

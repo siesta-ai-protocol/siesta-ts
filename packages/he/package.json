@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/he",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for he",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "he": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

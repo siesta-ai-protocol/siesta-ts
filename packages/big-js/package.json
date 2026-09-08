@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/big-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for big.js",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "big.js": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

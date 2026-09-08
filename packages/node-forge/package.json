@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/node-forge",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for node-forge",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "node-forge": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

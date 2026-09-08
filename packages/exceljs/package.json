@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/exceljs",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for exceljs",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "exceljs": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

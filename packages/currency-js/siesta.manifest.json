@@ -1,0 +1,73 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-currency-js",
+  "version": "0.1.0",
+  "description": "Currency math",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "CurrencyJsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Money",
+      "description": "Create a Money via currency.js",
+      "params": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Money": {
+      "methods": {
+        "add": {
+          "returns": "Money",
+          "params": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "amount"
+            ]
+          }
+        },
+        "format": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "getAmount": {
+          "returns": "number",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

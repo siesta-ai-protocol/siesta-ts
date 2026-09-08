@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/fastify",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for fastify",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "fastify": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

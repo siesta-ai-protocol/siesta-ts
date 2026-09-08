@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/markdown-it",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for markdown-it",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "markdown-it": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

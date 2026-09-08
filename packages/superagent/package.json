@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/superagent",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for superagent",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "superagent": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

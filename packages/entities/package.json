@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/entities",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for entities",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "entities": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

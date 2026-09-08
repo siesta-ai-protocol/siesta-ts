@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/jimp",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for jimp",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "jimp": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

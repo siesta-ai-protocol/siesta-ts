@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/sharp",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for sharp",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "sharp": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-cookie",
+  "version": "0.1.0",
+  "description": "Cookie parse/serialize",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "CookieAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Client",
+      "description": "Create a Client via cookie",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Client": {
+      "methods": {
+        "get": {
+          "returns": "Response",
+          "params": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ]
+          }
+        },
+        "post": {
+          "returns": "Response",
+          "params": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "body": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "url"
+            ]
+          }
+        },
+        "withHeader": {
+          "returns": "Client",
+          "params": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "value"
+            ]
+          }
+        }
+      }
+    },
+    "Response": {
+      "methods": {
+        "status": {
+          "returns": "integer",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "body": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

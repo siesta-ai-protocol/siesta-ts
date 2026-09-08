@@ -1,0 +1,56 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-remark",
+  "version": "0.1.0",
+  "description": "Markdown processor",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "RemarkAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "parse": {
+      "returns": "Document",
+      "description": "Create a Document via remark",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Document": {
+      "methods": {
+        "toHtml": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toText": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

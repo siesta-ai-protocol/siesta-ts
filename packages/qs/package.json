@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/qs",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for qs",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "qs": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

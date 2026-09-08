@@ -1,0 +1,56 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-jspdf",
+  "version": "0.1.0",
+  "description": "PDF generation in JS",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "JspdfAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Pdf",
+      "description": "Create a Pdf via jspdf",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Pdf": {
+      "methods": {
+        "addPage": {
+          "returns": "Pdf",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "save": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

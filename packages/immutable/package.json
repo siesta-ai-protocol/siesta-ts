@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/immutable",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for immutable",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "immutable": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

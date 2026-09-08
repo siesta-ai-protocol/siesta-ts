@@ -1,0 +1,74 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-ms",
+  "version": "0.1.0",
+  "description": "Convert time strings to ms",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "MsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "now": {
+      "returns": "DateTime",
+      "description": "Create a DateTime via ms",
+      "params": {
+        "type": "object",
+        "properties": {
+          "timezone": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "DateTime": {
+      "methods": {
+        "addDays": {
+          "returns": "DateTime",
+          "params": {
+            "type": "object",
+            "properties": {
+              "days": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "days"
+            ]
+          }
+        },
+        "format": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pattern"
+            ]
+          }
+        },
+        "toIso": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

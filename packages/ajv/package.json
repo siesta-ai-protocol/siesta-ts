@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/ajv",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for ajv",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "ajv": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

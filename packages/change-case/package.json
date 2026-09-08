@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/change-case",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for change-case",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "change-case": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

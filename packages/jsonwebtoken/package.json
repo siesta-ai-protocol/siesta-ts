@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/jsonwebtoken",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for jsonwebtoken",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "jsonwebtoken": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/ulid",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for ulid",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "ulid": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

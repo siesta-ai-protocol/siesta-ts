@@ -1,0 +1,50 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-cuid2",
+  "version": "0.1.0",
+  "description": "Secure unique ids",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "Cuid2Adapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "generate": {
+      "returns": "Uuid",
+      "description": "Create a Uuid via cuid2",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Uuid": {
+      "methods": {
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toBytes": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

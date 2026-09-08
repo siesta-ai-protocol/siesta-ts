@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/validator-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for validator",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "validator": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

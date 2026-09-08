@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/xlsx",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for xlsx",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "xlsx": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

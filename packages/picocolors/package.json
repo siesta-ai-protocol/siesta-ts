@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/picocolors",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for picocolors",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "picocolors": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

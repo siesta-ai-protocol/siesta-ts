@@ -1,0 +1,56 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-pdf-lib",
+  "version": "0.1.0",
+  "description": "Create and modify PDF",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "PdfLibAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Pdf",
+      "description": "Create a Pdf via pdf-lib",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Pdf": {
+      "methods": {
+        "addPage": {
+          "returns": "Pdf",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "save": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/tough-cookie",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for tough-cookie",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "tough-cookie": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

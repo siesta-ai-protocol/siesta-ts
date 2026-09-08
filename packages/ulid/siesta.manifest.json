@@ -1,0 +1,50 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-ulid",
+  "version": "0.1.0",
+  "description": "Universally unique lexicographically sortable identifiers",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "UlidAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "generate": {
+      "returns": "Uuid",
+      "description": "Create a Uuid via ulid",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Uuid": {
+      "methods": {
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toBytes": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-pino",
+  "version": "0.1.0",
+  "description": "Fast JSON logger",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "PinoAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Logger",
+      "description": "Create a Logger via pino",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Logger": {
+      "methods": {
+        "info": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        },
+        "error": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        },
+        "debug": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

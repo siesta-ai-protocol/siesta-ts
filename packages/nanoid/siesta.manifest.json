@@ -1,0 +1,50 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-nanoid",
+  "version": "0.1.0",
+  "description": "Tiny unique string ID generator",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "NanoidAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "generate": {
+      "returns": "Uuid",
+      "description": "Create a Uuid via nanoid",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Uuid": {
+      "methods": {
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toBytes": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

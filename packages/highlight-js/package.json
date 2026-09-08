@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/highlight-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for highlight.js",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "highlight.js": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

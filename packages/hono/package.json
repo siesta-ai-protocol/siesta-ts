@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/hono",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for hono",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "hono": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/path-to-regexp",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for path-to-regexp",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "path-to-regexp": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

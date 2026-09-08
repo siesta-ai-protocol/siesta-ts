@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/crypto-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for crypto-js",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "crypto-js": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

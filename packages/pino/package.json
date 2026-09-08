@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/pino",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for pino",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "pino": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

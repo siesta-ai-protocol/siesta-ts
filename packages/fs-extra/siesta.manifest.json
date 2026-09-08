@@ -1,0 +1,68 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-fs-extra",
+  "version": "0.1.0",
+  "description": "Extended filesystem methods",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "FsExtraAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "open": {
+      "returns": "File",
+      "description": "Create a File via fs-extra",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "File": {
+      "methods": {
+        "read": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "write": {
+          "returns": "File",
+          "params": {
+            "type": "object",
+            "properties": {
+              "contents": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "contents"
+            ]
+          }
+        },
+        "exists": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-zod",
+  "version": "0.1.0",
+  "description": "TypeScript-first schema validation",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "ZodAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Validator",
+      "description": "Create a Validator via zod",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Validator": {
+      "methods": {
+        "validate": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        },
+        "assert": {
+          "returns": "Validator",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

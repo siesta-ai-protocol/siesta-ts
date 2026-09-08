@@ -1,0 +1,68 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-csv-parse",
+  "version": "0.1.0",
+  "description": "CSV parser",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "CsvParseAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "open": {
+      "returns": "File",
+      "description": "Create a File via csv-parse",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "File": {
+      "methods": {
+        "read": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "write": {
+          "returns": "File",
+          "params": {
+            "type": "object",
+            "properties": {
+              "contents": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "contents"
+            ]
+          }
+        },
+        "exists": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

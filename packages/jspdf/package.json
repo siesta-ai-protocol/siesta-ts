@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/jspdf",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for jspdf",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "jspdf": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

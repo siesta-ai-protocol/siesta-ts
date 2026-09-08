@@ -1,0 +1,68 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-chokidar",
+  "version": "0.1.0",
+  "description": "File watcher",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "ChokidarAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "open": {
+      "returns": "File",
+      "description": "Create a File via chokidar",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "File": {
+      "methods": {
+        "read": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "write": {
+          "returns": "File",
+          "params": {
+            "type": "object",
+            "properties": {
+              "contents": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "contents"
+            ]
+          }
+        },
+        "exists": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

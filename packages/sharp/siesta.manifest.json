@@ -1,0 +1,65 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-sharp",
+  "version": "0.1.0",
+  "description": "High-performance image processing",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "SharpAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "open": {
+      "returns": "Image",
+      "description": "Create a Image via sharp",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Image": {
+      "methods": {
+        "resize": {
+          "returns": "Image",
+          "params": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "width"
+            ]
+          }
+        },
+        "save": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/ramda",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for ramda",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "ramda": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

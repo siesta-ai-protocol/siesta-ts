@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/string-width",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for string-width",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "string-width": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

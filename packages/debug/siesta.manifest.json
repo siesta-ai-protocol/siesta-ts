@@ -1,0 +1,76 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-debug",
+  "version": "0.1.0",
+  "description": "Tiny debug utility",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "DebugAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Logger",
+      "description": "Create a Logger via debug",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Logger": {
+      "methods": {
+        "info": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        },
+        "error": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        },
+        "debug": {
+          "returns": "Logger",
+          "params": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "message"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

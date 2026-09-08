@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/dinero-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for dinero.js",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "dinero.js": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

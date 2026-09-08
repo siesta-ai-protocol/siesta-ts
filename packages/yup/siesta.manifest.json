@@ -1,0 +1,58 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-yup",
+  "version": "0.1.0",
+  "description": "Schema builder",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "YupAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Validator",
+      "description": "Create a Validator via yup",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Validator": {
+      "methods": {
+        "validate": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        },
+        "assert": {
+          "returns": "Validator",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

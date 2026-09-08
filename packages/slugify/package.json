@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/slugify",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for slugify",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "slugify": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-rxjs",
+  "version": "0.1.0",
+  "description": "Reactive extensions",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "RxjsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Handle",
+      "description": "Create a Handle via rxjs",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Handle": {
+      "methods": {
+        "run": {
+          "returns": "Handle",
+          "params": {
+            "type": "object",
+            "properties": {
+              "input": {}
+            },
+            "required": []
+          }
+        },
+        "result": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

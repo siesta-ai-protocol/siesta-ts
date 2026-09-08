@@ -1,0 +1,72 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-i18next",
+  "version": "0.1.0",
+  "description": "Internationalization",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "I18nextAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Text",
+      "description": "Create a Text via i18next",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Text": {
+      "methods": {
+        "upper": {
+          "returns": "Text",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "lower": {
+          "returns": "Text",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "length": {
+          "returns": "integer",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

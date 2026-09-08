@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/query-string",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for query-string",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "query-string": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

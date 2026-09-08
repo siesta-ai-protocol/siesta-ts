@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/cheerio",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for cheerio",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "cheerio": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

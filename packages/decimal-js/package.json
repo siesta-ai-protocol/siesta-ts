@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/decimal-js",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for decimal.js",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "decimal.js": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

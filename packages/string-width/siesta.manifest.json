@@ -1,0 +1,72 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-string-width",
+  "version": "0.1.0",
+  "description": "String display width",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "StringWidthAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Text",
+      "description": "Create a Text via string-width",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Text": {
+      "methods": {
+        "upper": {
+          "returns": "Text",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "lower": {
+          "returns": "Text",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "length": {
+          "returns": "integer",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

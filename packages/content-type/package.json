@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/content-type",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for content-type",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "content-type": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/es-toolkit",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for es-toolkit",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "es-toolkit": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/pdfkit",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for pdfkit",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "pdfkit": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

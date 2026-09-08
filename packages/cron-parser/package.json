@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/cron-parser",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for cron-parser",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "cron-parser": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

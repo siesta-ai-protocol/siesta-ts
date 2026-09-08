@@ -1,0 +1,62 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-bcryptjs",
+  "version": "0.1.0",
+  "description": "bcrypt in pure JS",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "BcryptjsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Crypto",
+      "description": "Create a Crypto via bcryptjs",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Crypto": {
+      "methods": {
+        "encode": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "payload"
+            ]
+          }
+        },
+        "decode": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "token": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "token"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

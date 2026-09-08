@@ -1,0 +1,63 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-es-toolkit",
+  "version": "0.1.0",
+  "description": "Modern utility library",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "EsToolkitAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Collection",
+      "description": "Create a Collection via es-toolkit",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Collection": {
+      "methods": {
+        "push": {
+          "returns": "Collection",
+          "params": {
+            "type": "object",
+            "properties": {
+              "item": {}
+            },
+            "required": [
+              "item"
+            ]
+          }
+        },
+        "count": {
+          "returns": "integer",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toArray": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "description": "JSON-encoded array snapshot"
+        }
+      }
+    }
+  }
+}

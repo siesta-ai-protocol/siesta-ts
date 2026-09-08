@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/debug",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for debug",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "debug": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

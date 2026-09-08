@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/cuid2",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for cuid2",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "cuid2": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/strip-ansi",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for strip-ansi",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "strip-ansi": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

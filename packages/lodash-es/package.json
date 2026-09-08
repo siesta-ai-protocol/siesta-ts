@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/lodash-es",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for lodash-es",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "lodash-es": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

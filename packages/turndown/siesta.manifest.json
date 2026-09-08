@@ -1,0 +1,56 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-turndown",
+  "version": "0.1.0",
+  "description": "HTML to Markdown",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "TurndownAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "parse": {
+      "returns": "Document",
+      "description": "Create a Document via turndown",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Document": {
+      "methods": {
+        "toHtml": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toText": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

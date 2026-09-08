@@ -1,0 +1,56 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-marked",
+  "version": "0.1.0",
+  "description": "Markdown parser",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "MarkedAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "parse": {
+      "returns": "Document",
+      "description": "Create a Document via marked",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    }
+  },
+  "types": {
+    "Document": {
+      "methods": {
+        "toHtml": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toText": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

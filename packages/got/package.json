@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/got",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for got",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "got": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}

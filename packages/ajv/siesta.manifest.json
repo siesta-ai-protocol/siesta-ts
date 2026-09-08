@@ -1,0 +1,58 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-ajv",
+  "version": "0.1.0",
+  "description": "JSON Schema validator",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "AjvAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "create": {
+      "returns": "Validator",
+      "description": "Create a Validator via ajv",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Validator": {
+      "methods": {
+        "validate": {
+          "returns": "boolean",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        },
+        "assert": {
+          "returns": "Validator",
+          "params": {
+            "type": "object",
+            "properties": {
+              "value": {}
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

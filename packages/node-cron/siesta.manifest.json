@@ -1,0 +1,74 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-node-cron",
+  "version": "0.1.0",
+  "description": "Cron scheduling",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "NodeCronAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "now": {
+      "returns": "DateTime",
+      "description": "Create a DateTime via node-cron",
+      "params": {
+        "type": "object",
+        "properties": {
+          "timezone": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "DateTime": {
+      "methods": {
+        "addDays": {
+          "returns": "DateTime",
+          "params": {
+            "type": "object",
+            "properties": {
+              "days": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "days"
+            ]
+          }
+        },
+        "format": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pattern"
+            ]
+          }
+        },
+        "toIso": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

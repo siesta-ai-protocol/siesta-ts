@@ -1,0 +1,50 @@
+{
+  "siesta": "1.0",
+  "library": "siesta-uuid-js",
+  "version": "0.1.0",
+  "description": "RFC UUID generation",
+  "minSiestaVersion": "1.0",
+  "adapter": {
+    "class": "UuidJsAdapter"
+  },
+  "config": {
+    "locale": {
+      "type": "string",
+      "default": "en",
+      "description": "Default locale"
+    }
+  },
+  "factories": {
+    "generate": {
+      "returns": "Uuid",
+      "description": "Create a Uuid via uuid",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  "types": {
+    "Uuid": {
+      "methods": {
+        "toString": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "toBytes": {
+          "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      }
+    }
+  }
+}

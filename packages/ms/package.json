@@ -1,0 +1,14 @@
+{
+  "name": "@siesta/ms",
+  "version": "0.1.0",
+  "description": "Siesta experimental adapter for ms",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@siesta/runtime": "1.0.0",
+    "ms": "*"
+  },
+  "siesta": {
+    "manifest": "siesta.manifest.json"
+  }
+}
