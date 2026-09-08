@@ -22,7 +22,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -38,7 +39,8 @@
             "required": [
               "value"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "assert": {
           "returns": "Validator",
@@ -50,9 +52,15 @@
             "required": [
               "value"
             ]
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "validator",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

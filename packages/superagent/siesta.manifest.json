@@ -27,7 +27,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "Client",
@@ -43,7 +44,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -61,7 +63,8 @@
             "required": [
               "url"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "post": {
           "returns": "Response",
@@ -78,7 +81,8 @@
             "required": [
               "url"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "withHeader": {
           "returns": "Client",
@@ -96,7 +100,8 @@
               "name",
               "value"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -105,7 +110,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "Client",
@@ -114,7 +120,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     },
@@ -126,7 +133,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "body": {
           "returns": "string",
@@ -134,9 +142,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "superagent",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

@@ -31,7 +31,8 @@
           }
         },
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "File",
@@ -47,7 +48,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -59,7 +61,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "write": {
           "returns": "File",
@@ -73,7 +76,8 @@
             "required": [
               "contents"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "exists": {
           "returns": "boolean",
@@ -81,7 +85,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -90,7 +95,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "File",
@@ -99,9 +105,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "csv-stringify",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

@@ -31,7 +31,8 @@
           }
         },
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "DateTime",
@@ -47,7 +48,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -65,7 +67,8 @@
             "required": [
               "days"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "format": {
           "returns": "string",
@@ -79,7 +82,8 @@
             "required": [
               "pattern"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "toIso": {
           "returns": "string",
@@ -87,7 +91,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -96,7 +101,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "DateTime",
@@ -105,9 +111,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "cron-parser",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

@@ -27,7 +27,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "Handle",
@@ -43,7 +44,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -57,7 +59,8 @@
               "input": {}
             },
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "result": {
           "returns": "string",
@@ -65,7 +68,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -74,7 +78,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "Handle",
@@ -83,9 +88,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "bluebird",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

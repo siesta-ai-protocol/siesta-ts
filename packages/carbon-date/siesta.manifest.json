@@ -3,20 +3,37 @@
   "library": "siesta-carbon-date",
   "version": "1.0.0",
   "description": "Date manipulation via date-fns",
+  "package": {
+    "name": "date-fns",
+    "version": "4.0.0",
+    "range": "^4.0"
+  },
   "adapter": {
     "class": "DateFnsAdapter"
   },
   "factories": {
     "now": {
       "returns": "DateTime",
-      "params": { "type": "object", "properties": {}, "required": [] }
+      "since": "2.0.0",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
     },
     "parse": {
       "returns": "DateTime",
+      "since": "2.0.0",
       "params": {
         "type": "object",
-        "properties": { "input": { "type": "string" } },
-        "required": ["input"]
+        "properties": {
+          "input": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
       }
     }
   },
@@ -25,18 +42,32 @@
       "methods": {
         "addWeeks": {
           "returns": "DateTime",
+          "since": "2.0.0",
           "params": {
             "type": "object",
-            "properties": { "weeks": { "type": "integer" } },
-            "required": ["weeks"]
+            "properties": {
+              "weeks": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "weeks"
+            ]
           }
         },
         "format": {
           "returns": "string",
+          "since": "2.0.0",
           "params": {
             "type": "object",
-            "properties": { "pattern": { "type": "string" } },
-            "required": ["pattern"]
+            "properties": {
+              "pattern": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pattern"
+            ]
           }
         }
       }

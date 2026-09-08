@@ -1,7 +1,8 @@
 import { discoverManifests } from './discovery.js';
 import type { LibraryAdapter } from './types.js';
+import { assertAvailable, filterManifest, resolvePackageVersion } from './version.js';
 
-type HandleEntry = { library: string; type: string; instance: unknown };
+type HandleEntry = { library: string; type: string; instance: unknown; packageVersion: string | null };
 
 export class SiestaKernel {
   private handles = new Map<string, HandleEntry>();
@@ -55,11 +56,13 @@ export class SiestaKernel {
       projectRoot: this.projectRoot,
       libraries: this.discovered.map((lib) => ({
         id: lib.manifest.library,
+        version: lib.manifest.version,
         manifest: lib.manifestPath,
         valid: lib.valid,
         executable: Boolean(lib.adapterClass && this.adapters.has(String(lib.manifest.library))),
         registered: this.adapters.has(String(lib.manifest.library)),
         adapter: lib.adapterClass,
+        package: lib.manifest.package ?? null,
       })),
     };
   }
@@ -83,7 +86,17 @@ export class SiestaKernel {
       return { error: { code: 'LIBRARY_NOT_FOUND', message: `Library not found: ${params.library}`, retryable: false } };
     }
 
-    return { siestaVersion: '1.0', manifest: adapter.getManifest() };
+    const manifest = adapter.getManifest();
+    const packageVersion = resolvePackageVersion(
+      manifest,
+      typeof params.packageVersion === 'string' ? params.packageVersion : null,
+    );
+
+    return {
+      siestaVersion: '1.0',
+      packageVersion,
+      manifest: filterManifest(manifest, packageVersion),
+    };
   }
 
   private configure(params: Record<string, unknown>): Record<string, unknown> {
@@ -108,16 +121,43 @@ export class SiestaKernel {
       return { error: { code: 'LIBRARY_NOT_FOUND', message: `Library not found: ${library}`, retryable: false } };
     }
 
-    const instance = adapter.create(String(params.factory), (params.args ?? {}) as Record<string, unknown>);
+    const manifest = adapter.getManifest();
+    const factory = String(params.factory);
+    const factoryDef = (manifest.factories as Record<string, { since?: string; until?: string }> | undefined)?.[factory];
+    if (!factoryDef) {
+      return { error: { code: 'METHOD_NOT_FOUND', message: `Method not found: factory::${factory}`, retryable: false } };
+    }
+
+    const packageVersion = resolvePackageVersion(
+      manifest,
+      typeof params.packageVersion === 'string' ? params.packageVersion : null,
+    );
+
+    try {
+      assertAvailable(factoryDef, `Factory ${factory}`, packageVersion);
+    } catch (e) {
+      const err = e as Error & { code?: string };
+      return {
+        error: {
+          code: err.code ?? 'VERSION_UNSUPPORTED',
+          message: err.message,
+          retryable: true,
+          field: 'packageVersion',
+        },
+      };
+    }
+
+    const instance = adapter.create(factory, (params.args ?? {}) as Record<string, unknown>);
     const handle = `hdl_${++this.counter}`;
     const type = adapter.getType(instance);
 
-    this.handles.set(handle, { library, type, instance });
+    this.handles.set(handle, { library, type, instance, packageVersion });
 
     return {
       siestaVersion: '1.0',
       handle,
       type,
+      packageVersion,
       snapshot: adapter.snapshot(instance),
     };
   }
@@ -131,6 +171,31 @@ export class SiestaKernel {
     }
 
     const adapter = this.adapters.get(entry.library)!;
+    const manifest = adapter.getManifest();
+    const method = String(params.method);
+    const typeDef = (manifest.types as Record<string, { since?: string; until?: string; methods?: Record<string, { since?: string; until?: string }> }> | undefined)?.[
+      entry.type
+    ];
+    const methodDef = typeDef?.methods?.[method];
+    if (!methodDef) {
+      return { error: { code: 'METHOD_NOT_FOUND', message: `Method not found: ${entry.type}::${method}`, retryable: false } };
+    }
+
+    try {
+      if (typeDef) assertAvailable(typeDef, `Type ${entry.type}`, entry.packageVersion);
+      assertAvailable(methodDef, `${entry.type}::${method}`, entry.packageVersion);
+    } catch (e) {
+      const err = e as Error & { code?: string };
+      return {
+        error: {
+          code: err.code ?? 'VERSION_UNSUPPORTED',
+          message: err.message,
+          retryable: true,
+          field: 'packageVersion',
+        },
+      };
+    }
+
     const args = (params.args ?? {}) as Record<string, unknown>;
     let context: unknown;
 
@@ -138,11 +203,16 @@ export class SiestaKernel {
       context = this.handles.get(args.otherHandle)?.instance;
     }
 
-    const result = adapter.invoke(entry.instance, String(params.method), args, context);
+    const result = adapter.invoke(entry.instance, method, args, context);
 
     if (result !== null && typeof result === 'object') {
       const newHandle = `hdl_${++this.counter}`;
-      this.handles.set(newHandle, { library: entry.library, type: adapter.getType(result), instance: result });
+      this.handles.set(newHandle, {
+        library: entry.library,
+        type: adapter.getType(result),
+        instance: result,
+        packageVersion: entry.packageVersion,
+      });
 
       return {
         siestaVersion: '1.0',

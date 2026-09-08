@@ -22,7 +22,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -34,7 +35,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "toBytes": {
           "returns": "string",
@@ -42,9 +44,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "nanoid",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

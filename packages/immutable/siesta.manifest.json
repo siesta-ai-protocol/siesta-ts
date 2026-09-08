@@ -27,7 +27,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "Collection",
@@ -43,7 +44,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -59,7 +61,8 @@
             "required": [
               "item"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "count": {
           "returns": "integer",
@@ -67,7 +70,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "toArray": {
           "returns": "string",
@@ -76,7 +80,8 @@
             "properties": {},
             "required": []
           },
-          "description": "JSON-encoded array snapshot"
+          "description": "JSON-encoded array snapshot",
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -85,7 +90,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "Collection",
@@ -94,9 +100,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "immutable",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

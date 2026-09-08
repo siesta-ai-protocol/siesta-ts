@@ -27,7 +27,8 @@
         "type": "object",
         "properties": {},
         "required": []
-      }
+      },
+      "since": "1.0.0"
     },
     "parse": {
       "returns": "Pdf",
@@ -43,7 +44,8 @@
         "required": [
           "input"
         ]
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -55,7 +57,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "save": {
           "returns": "boolean",
@@ -69,7 +72,8 @@
             "required": [
               "path"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "inspect": {
           "returns": "string",
@@ -78,7 +82,8 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         },
         "reset": {
           "returns": "Pdf",
@@ -87,9 +92,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "pdfkit",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }

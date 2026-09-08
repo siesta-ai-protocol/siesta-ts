@@ -26,7 +26,8 @@
           }
         },
         "required": []
-      }
+      },
+      "since": "1.0.0"
     }
   },
   "types": {
@@ -44,7 +45,8 @@
             "required": [
               "days"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "format": {
           "returns": "string",
@@ -58,7 +60,8 @@
             "required": [
               "pattern"
             ]
-          }
+          },
+          "since": "1.0.0"
         },
         "toIso": {
           "returns": "string",
@@ -66,9 +69,15 @@
             "type": "object",
             "properties": {},
             "required": []
-          }
+          },
+          "since": "1.0.0"
         }
       }
     }
+  },
+  "package": {
+    "name": "ms",
+    "version": "1.0.0",
+    "range": "^1.0 || ^2.0 || ^3.0 || ^4.0"
   }
 }
