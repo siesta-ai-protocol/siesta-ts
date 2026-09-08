@@ -1,8 +1,8 @@
 {
   "siesta": "1.0",
   "library": "siesta-strip-ansi",
-  "version": "0.1.0",
-  "description": "Strip ANSI escape codes",
+  "version": "0.2.0",
+  "description": "Strip ANSI escape codes (deep experimental surface)",
   "minSiestaVersion": "1.0",
   "adapter": {
     "class": "StripAnsiAdapter"
@@ -12,6 +12,11 @@
       "type": "string",
       "default": "en",
       "description": "Default locale"
+    },
+    "strict": {
+      "type": "boolean",
+      "default": true,
+      "description": "Strict validation / parsing"
     }
   },
   "factories": {
@@ -23,6 +28,22 @@
         "properties": {
           "input": {
             "type": "string"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      }
+    },
+    "parse": {
+      "returns": "Text",
+      "description": "Parse / build from input",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "description": "Raw input"
           }
         },
         "required": [
@@ -60,6 +81,24 @@
         },
         "toString": {
           "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "inspect": {
+          "returns": "string",
+          "description": "Debug snapshot string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "reset": {
+          "returns": "Text",
+          "description": "Reset to initial state",
           "params": {
             "type": "object",
             "properties": {},

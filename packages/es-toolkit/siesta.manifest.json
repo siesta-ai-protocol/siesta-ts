@@ -1,8 +1,8 @@
 {
   "siesta": "1.0",
   "library": "siesta-es-toolkit",
-  "version": "0.1.0",
-  "description": "Modern utility library",
+  "version": "0.2.0",
+  "description": "Modern utility library (deep experimental surface)",
   "minSiestaVersion": "1.0",
   "adapter": {
     "class": "EsToolkitAdapter"
@@ -12,6 +12,11 @@
       "type": "string",
       "default": "en",
       "description": "Default locale"
+    },
+    "strict": {
+      "type": "boolean",
+      "default": true,
+      "description": "Strict validation / parsing"
     }
   },
   "factories": {
@@ -22,6 +27,22 @@
         "type": "object",
         "properties": {},
         "required": []
+      }
+    },
+    "parse": {
+      "returns": "Collection",
+      "description": "Parse / build from input",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "description": "Raw input"
+          }
+        },
+        "required": [
+          "input"
+        ]
       }
     }
   },
@@ -56,6 +77,24 @@
             "required": []
           },
           "description": "JSON-encoded array snapshot"
+        },
+        "inspect": {
+          "returns": "string",
+          "description": "Debug snapshot string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "reset": {
+          "returns": "Collection",
+          "description": "Reset to initial state",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
         }
       }
     }

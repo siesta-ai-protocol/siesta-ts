@@ -1,8 +1,8 @@
 {
   "siesta": "1.0",
   "library": "siesta-cron-parser",
-  "version": "0.1.0",
-  "description": "Cron expression parser",
+  "version": "0.2.0",
+  "description": "Cron expression parser (deep experimental surface)",
   "minSiestaVersion": "1.0",
   "adapter": {
     "class": "CronParserAdapter"
@@ -12,6 +12,11 @@
       "type": "string",
       "default": "en",
       "description": "Default locale"
+    },
+    "strict": {
+      "type": "boolean",
+      "default": true,
+      "description": "Strict validation / parsing"
     }
   },
   "factories": {
@@ -26,6 +31,22 @@
           }
         },
         "required": []
+      }
+    },
+    "parse": {
+      "returns": "DateTime",
+      "description": "Parse / build from input",
+      "params": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "description": "Raw input"
+          }
+        },
+        "required": [
+          "input"
+        ]
       }
     }
   },
@@ -62,6 +83,24 @@
         },
         "toIso": {
           "returns": "string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "inspect": {
+          "returns": "string",
+          "description": "Debug snapshot string",
+          "params": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "reset": {
+          "returns": "DateTime",
+          "description": "Reset to initial state",
           "params": {
             "type": "object",
             "properties": {},
